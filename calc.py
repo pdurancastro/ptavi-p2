@@ -19,11 +19,10 @@ def mult(op1, op2):
 
 
 def div(op1, op2):
-    if op2 == 0:
-        sys.exit("Error: No puedes dividir un numero por 0")
-    else:
-        return op1 / op2
-
+    try:
+        return op1/ op2
+    except ZeroDivisionError:
+        sys.exit("Error:No puedes dividir un numero 0")
 
 
 if __name__ == "__main__":
