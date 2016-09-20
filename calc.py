@@ -19,7 +19,10 @@ def mult(op1, op2):
 
 
 def div(op1, op2):
-	return op1 / op2
+    if op2 == 0:
+        sys.exit("Error: No puedes dividir un numero por 0")
+    else:
+        return op1 / op2
 
 
 
@@ -28,7 +31,8 @@ if __name__ == "__main__":
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
-        sys.exit("Error: Non numerical parameters")
+        sys.exit("Error: No es un parametro numerico")
+
 
     if sys.argv[2] == "suma":
         result = plus(operando1, operando2)
@@ -36,12 +40,13 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         result = minus(operando1, operando2)
 
-	elif sys.argv[2] == "multiplicar":
-		result = mult(operando1, operando2)
+    elif sys.argv[2] == "multiplicar":
+        result = mult(operando1, operando2)
 
-	
+    elif sys.argv[2] == "dividir":
+        result = div(operando1, operando2)
 
     else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
+        sys.exit('Operación sólo puede ser suma, resta, multiplicar o dividir.')
 
     print(result)
