@@ -2,15 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import calcoo
 
-class Calculadora():
-    def suma(self, op1, op2):
-        return op1 + op2
-
-    def resta(self, op1, op2):
-        return op1 - op2
-
-class CalculadoraHija(Calculadora):
+class CalculadoraHija(calcoo.Calculadora):
     def multiplicar(self, op1, op2):
         return op1 * op2
 
@@ -18,7 +12,7 @@ class CalculadoraHija(Calculadora):
         try:
             return op1 / op2
         except ZeroDivisionError:
-            sys.exit("Error:No puedes dividir entre 0")
+            sys.exit("Division by zero is not allowed")
 
 if __name__ == '__main__':
     calculadora=CalculadoraHija()
