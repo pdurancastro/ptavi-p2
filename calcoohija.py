@@ -4,6 +4,7 @@
 import sys
 import calcoo
 
+
 class CalculadoraHija(calcoo.Calculadora):
     def multiplicar(self, op1, op2):
         return op1 * op2
@@ -15,7 +16,7 @@ class CalculadoraHija(calcoo.Calculadora):
             sys.exit("Division by zero is not allowed")
 
 if __name__ == '__main__':
-    calculadora=CalculadoraHija()
+    calculadora = CalculadoraHija()
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
