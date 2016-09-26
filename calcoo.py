@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-ç
+# -*- coding: utf-8 -*-
 
 import sys
+
 
 class Calculadora():
     def suma(self, op1, op2):
@@ -11,7 +12,7 @@ class Calculadora():
         return op1 - op2
 
 if __name__ == '__main__':
-    calculadora=Calculadora()
+    calculadora = Calculadora()
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
